@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/seoul.css">
-    <link rel="stylesheet" href="css/common.css">
     <title>20170617~20170623 首爾行</title>
 </head>
 <body ng-controller="seoulController">
@@ -33,7 +32,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">行程表 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class="endpoint">
-                                    <a href="#schedule">總表</a>
+                                    <a href="#schedule">行程表</a>
                                 </li>
                                 <li class="endpoint">
                                     <a href="#day1">Day 1</a>
@@ -74,11 +73,19 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="endpoint">
-                            <a href="#scene">景點</a>
-                        </li>
-                        <li class="endpoint">
-                            <a href="#traffic">交通</a>
+                        <li id="traffic-list" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">交通 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="endpoint">
+                                    <a href="#airplane">航班</a>
+                                </li>
+                                <li class="endpoint">
+                                    <a href="#bus">機場巴士</a>
+                                </li>
+                                <li class="endpoint">
+                                    <a href="#subway">地鐵</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="endpoint">
                             <a href="#notification">注意事項</a>
@@ -96,8 +103,26 @@
 
 
     <div id="schedule" class="section oddsection">
-        <div class="wrap oddwrap">
-            schedule
+        <div class="wrap oddwrap table-responsive">
+            <h2>行程表</h2>
+            <table class="table">
+             <thead class="thead-inverse table-striped">
+                <tr>
+                    <th>類型</th>
+                    <th>起始時間</th>
+                    <th>結束時間</th>
+                    <th>地點</th>
+                    <th>費用</th>
+                </tr>
+                </thead>
+                <tr ng-repeat="x in schedule">
+                    <td>{{ x.Type }}</td>
+                    <td>{{ x.STime }}</td>
+                    <td>{{ x.ETime }}</td>
+                    <td>{{ x.Location }}</td>
+                    <td>{{ x.Price }}</td>
+              </tr>
+            </table>
         </div>
     </div>
     <div id="day1" class="section evensection">
@@ -158,7 +183,7 @@
         <div class="wrap evenwrap">
              <h2>景點資訊</h2>
             <div ng-repeat="n in scenes" class="resInfo col-lg-4 col-md-6 col-sm-12">
-                <span id="Span1">名稱:{{n.Name}}</span><br>
+                <span id="{{n.Id}}">名稱:{{n.Name}}</span><br>
                 <span>英文：{{n.engName}}</span><br>
                 <span>韓文：{{n.koreaName}}</span><br>
                 <span>地址：{{n.Address}}</span><br>
@@ -172,7 +197,17 @@
             </div>
         </div>
     </div>
-    <div id="traffic" class="section oddsection">
+    <div id="airplane" class="section oddsection">
+        <div class="wrap oddwrap">
+            traffic
+        </div>
+    </div>
+     <div id="bus" class="section oddsection">
+        <div class="wrap oddwrap">
+            traffic
+        </div>
+    </div>
+     <div id="subway" class="section oddsection">
         <div class="wrap oddwrap">
             traffic
         </div>
@@ -190,6 +225,7 @@
     <!-- Models -->
     <script src="data/restaurant.js"></script>
     <script src="data/scene.js"></script>
+    <script src="data/schedule.js"></script>
     <!-- Main Module -->
     <script src="src/seoul.module.js"></script>
     <script>
