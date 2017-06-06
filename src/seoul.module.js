@@ -9,7 +9,9 @@ angular.module('seoul', [])
         
         $scope.restaurants = resturantModel.restaurants;
         $scope.scenes = sceneModel.scenes;
-        console.log($scope.restaurants);
+        $scope.schedule = scheduleModel.schedule;
+
+
         $scope.name = "";
         $scope.totalValue = 0;
 
