@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html ng-app="seoul">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/seoul.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>20170617~20170623 首爾行</title>
+</head>
+<body ng-controller="seoulController">
+    <header id="header">
+        <nav id="header-nav" class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <a href="seoul.html">
+                            <h1>2017 首爾行</h1>
+                        </a>
+                    </div>
+
+                    <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div id="collapsable-nav" class="collapse navbar-collapse">
+                    <ul id="nav-list" class="nav navbar-nav navbar-right">
+                        <li id="schedule-list" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">行程表 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="endpoint">
+                                    <a href="#schedule">總表</a>
+                                </li>
+                                <li class="endpoint">
+                                    <a href="#day1">Day 1</a>
+                                </li>
+                                <li class="endpoint">
+                                    <a href="#day2">Day 2</a>
+                                </li>
+                                <li class="endpoint">
+                                    <a href="#day3">Day 3</a>
+                                </li>
+                                <li class="endpoint">
+                                    <a href="#day4">Day 4</a>
+                                </li>
+                                <li class="endpoint">
+                                    <a href="#day5">Day 5</a>
+                                </li>
+                                <li class="endpoint">
+                                    <a href="#day6">Day 6</a>
+                                </li>
+                                <li class="endpoint">
+                                    <a href="#day7">Day 7</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="restaurant-list" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">餐廳 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="endpoint" ng-repeat="n in restaurants">
+                                    <a href="#{{n.Id}}">{{n.Name}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="scene-list" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">景點 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="endpoint" ng-repeat="n in scenes">
+                                    <a href="#{{n.Id}}">{{n.Name}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="endpoint">
+                            <a href="#scene">景點</a>
+                        </li>
+                        <li class="endpoint">
+                            <a href="#traffic">交通</a>
+                        </li>
+                        <li class="endpoint">
+                            <a href="#notification">注意事項</a>
+                        </li>
+
+                    </ul>
+                    <!-- #nav-list -->
+                </div>
+                <!-- .collapse .navbar-collapse -->
+            </div>
+            <!-- .container -->
+        </nav>
+        <!-- #header-nav -->
+    </header>
+
+
+    <div id="schedule" class="section oddsection">
+        <div class="wrap oddwrap">
+            schedule
+        </div>
+    </div>
+    <div id="day1" class="section evensection">
+        <div class="wrap evenwrap">
+            day1
+        </div>
+    </div>
+    <div id="day2" class="section oddsection">
+        <div class="wrap oddwrap">
+            day2
+             {{totalValue}}
+        </div>
+    </div>
+    <div id="day3" class="section evensection">
+        <div class="wrap evenwrap">
+            day3
+        </div>
+    </div>
+    <div id="day4" class="section oddsection">
+        <div class="wrap oddwrap">
+            day4    
+        </div>
+    </div>
+    <div id="day5" class="section evensection">
+        <div class="wrap evenwrap">
+            day5
+        </div>
+    </div>
+    <div id="day6" class="section oddsection">
+        <div class="wrap oddwrap">
+            day6
+        </div>
+    </div>
+    <div id="day7" class="section evensection">
+        <div class="wrap evenwrap">
+            day7
+        </div>
+    </div>
+    <div id="restaurant" class="section oddsection">
+        <div class="wrap oddwrap">
+            <h2>餐廳資訊</h2>
+            <div ng-repeat="n in restaurants" class="resInfo col-lg-4 col-md-6 col-sm-12">
+                <span id="{{n.Id}}">名稱:{{n.Name}}</span><br>
+                <span>英文：{{n.engName}}</span><br>
+                <span>韓文：{{n.koreaName}}</span><br>
+                <span>地址：{{n.Address}}</span><br>
+                <span>英文地址：{{n.EngAddress}}</span><br>
+                <span>韓文地址：{{n.KoreaAddress}}</span><br>
+                <span>營業時間：{{n.time}}</span><br>
+                <span>交通方式：{{n.trafficInfo}}</span><br>
+                <span>其他資訊：</span><br>
+                <span ng-repeat="o in n.otherInformation">{{o}}<br></span>
+                <img  ng-repeat="i in n.images" class="img-responsive" ng-src="data/image/{{i}}">
+            </div>
+        </div>
+    </div>
+    <div id="scene" class="section evensection">
+        <div class="wrap evenwrap">
+             <h2>景點資訊</h2>
+            <div ng-repeat="n in scenes" class="resInfo col-lg-4 col-md-6 col-sm-12">
+                <span id="Span1">名稱:{{n.Name}}</span><br>
+                <span>英文：{{n.engName}}</span><br>
+                <span>韓文：{{n.koreaName}}</span><br>
+                <span>地址：{{n.Address}}</span><br>
+                <span>英文地址：{{n.EngAddress}}</span><br>
+                <span>韓文地址：{{n.KoreaAddress}}</span><br>
+                <span>開放時間：{{n.time}}</span><br>
+                <span>交通方式：{{n.trafficInfo}}</span>
+                <span>其他資訊：</span><br>
+                <span ng-repeat="o in n.otherInformation">{{o}}<br></span>
+                <img  ng-repeat="i in n.images" class="img-responsive" ng-src="data/image/{{i}}">
+            </div>
+        </div>
+    </div>
+    <div id="traffic" class="section oddsection">
+        <div class="wrap oddwrap">
+            traffic
+        </div>
+    </div>
+    <div id="notification" class="section evensection">
+        <div class="wrap evenwrap">
+            notification
+        </div>
+    </div>
+
+    <!-- Libs -->
+    <script src="lib/jquery-2.1.4.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <!-- Models -->
+    <script src="data/restaurant.js"></script>
+    <script src="data/scene.js"></script>
+    <!-- Main Module -->
+    <script src="src/seoul.module.js"></script>
+    <script>
+
+        $(function () {
+            if ($(window).width() < 760) { //當視窗小於480時才運作
+                $('.endpoint').on('click', function () {
+                    $('.navbar-collapse').collapse('hide');
+                });
+            }
+        });
+
+    </script>
+
+</body>
+</html>
