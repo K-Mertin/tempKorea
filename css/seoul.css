@@ -2,7 +2,7 @@ body {
     font-size: 16px;
     color: #000000;
     background-color: #FFFFFF;
-    font-family:  Microsoft JhengHei;
+    font-family: Microsoft JhengHei;
 }
 
 .initial-loading {
@@ -23,7 +23,7 @@ body {
 }
 
     .navbar-brand h1 { /* Restaurant name */
-        font-family:  Microsoft JhengHei;
+        font-family: Microsoft JhengHei;
         color: #000000;
         font-size: 1.5em;
         text-transform: uppercase;
@@ -70,8 +70,8 @@ body {
 /* END HEADER */
 h2 {
     font-family: Microsoft JhengHei;
-    font-weight:bold;
-     font-size: 1.4em;
+    font-weight: bold;
+    font-size: 1.4em;
     background: #f6b319;
     padding: 0;
     margin: 0;
@@ -120,10 +120,38 @@ th {
     margin-top: 50px;
 }
 
-.resInfo {
+#restaurant .resInfo:nth-child(even) {
     border: dotted;
     border-width: thin;
+    height:300px;
+    background-color: #ffe9a2;
+    overflow:scroll;
 }
+
+#restaurant .resInfo:nth-child(odd) {
+    border: dotted;
+    height:300px;
+    border-width: thin;
+    background-color: #ff9797;
+    overflow:scroll;
+}
+
+#scene .sceneInfo:nth-child(even) {
+     border: dotted;
+    border-width: thin;
+    height:300px;
+    background-color: #ffe9a2;
+    overflow:scroll;
+}
+
+#scene .sceneInfo:nth-child(odd) {
+     border: dotted;
+    height:300px;
+    border-width: thin;
+    background-color: #ff9797;
+    overflow:scroll;
+}
+
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
     /* Header */
