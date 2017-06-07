@@ -144,6 +144,13 @@ var sceneModel = JSON.parse('{ "scenes" : [' +
     '"time": "10:00~23:00 (運行間隔為10分鐘) ※週五～週日、節假日有可能延長營業時間",      "trafficInfo": "地鐵4號線明洞(Myeong-dong)站從3號出口步行至纜車站約需15分鐘; 地鐵4號線明洞(Myeong-dong)站從3號出口步行至南山乘電梯處約需10分鐘",' +
     '"otherInformation":["門票","來回:8500","單程:6000"],' +
      '"link":["https://www.hanchao.com/contents/spot_detail.html?id=893"],' +
+     '"images":""},' +
+                            
+'{   "Id": "scene22",      "Name": "Line Friend Store",      "EngName": "",      "KoreaName": "",' +
+    '"Address": "",      "EngAddress": "",      "KoreaAddress": "",' +
+    '"time": "",      "trafficInfo": "",' +
+    '"otherInformation":[""],' +
+     '"link":[""],' +
      '"images":""}' +
                             
 /*
