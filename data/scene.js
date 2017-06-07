@@ -151,7 +151,7 @@ var sceneModel = JSON.parse('{ "scenes" : [' +
     '"time": "10:00~23:00",      "trafficInfo": "地铁4号线明洞(Myeong-dong)站6号出口，步行2分钟; 地铁2号线乙支路入口(Euljiro1(il)-ga)站6号出口，步行10分钟",' +
     '"otherInformation":["韩币、信用卡(银联卡、JCB、visa、master、amex)"],' +
      '"link":["https://www.hanchao.com/contents/shop_detail.html?id=15653"],' +
-     '"images":""}'
+     '"images":""}'+
 /*
 '{   "Id": "scene",      "Name": "",      "EngName": "",      "KoreaName": "",' +
     '"Address": "",      "EngAddress": "",      "KoreaAddress": "",' +
