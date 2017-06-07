@@ -144,7 +144,14 @@ var sceneModel = JSON.parse('{ "scenes" : [' +
     '"time": "10:00~23:00 (運行間隔為10分鐘) ※週五～週日、節假日有可能延長營業時間",      "trafficInfo": "地鐵4號線明洞(Myeong-dong)站從3號出口步行至纜車站約需15分鐘; 地鐵4號線明洞(Myeong-dong)站從3號出口步行至南山乘電梯處約需10分鐘",' +
     '"otherInformation":["門票","來回:8500","單程:6000"],' +
      '"link":["https://www.hanchao.com/contents/spot_detail.html?id=893"],' +
-     '"images":""}' +
+     '"images":""},' +
+                            
+'{   "Id": "scene22",      "Name": "LINE FRIENDS STORE 明洞站店",      "EngName": "",      "KoreaName": "라인프렌즈 플래그십 스토어 명동역점",' +
+    '"Address": "首尔特别市中区明洞8Na街9 1~2F",      "EngAddress": "",      "KoreaAddress": "서울특별시 중구 명동8나길 9 1～2F",' +
+    '"time": "10:00~23:00",      "trafficInfo": "地铁4号线明洞(Myeong-dong)站6号出口，步行2分钟; 地铁2号线乙支路入口(Euljiro1(il)-ga)站6号出口，步行10分钟",' +
+    '"otherInformation":["韩币、信用卡(银联卡、JCB、visa、master、amex)"],' +
+     '"link":["https://www.hanchao.com/contents/shop_detail.html?id=15653"],' +
+     '"images":""}'
 /*
 '{   "Id": "scene",      "Name": "",      "EngName": "",      "KoreaName": "",' +
     '"Address": "",      "EngAddress": "",      "KoreaAddress": "",' +
