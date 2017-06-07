@@ -71,6 +71,7 @@ var scheduleModel = JSON.parse('{ "schedule" : [' +
 '{   "Type": "",      "STime": "",      "ETime": "",      "Location": "(可採買)", "Price": ""},' +
 '{   "Type": "交通",      "STime": "19:30",      "ETime": "20:00",      "Location": "朴家部隊鍋 (步行)> 鐘閣站 (L1)> 東大門站 (L4)> 明洞站", "Price": ""},' +
 '{   "Type": "",      "STime": "",      "ETime": "",      "Location": "朴家部隊鍋 (步行)> 明洞站", "Price": ""},' +
+'{   "Type": "景點",      "STime": "",      "ETime": "",      "Location": "Line Friend Sotre", "Price": ""},' +
 '{   "Type": "Day6",      "STime": "6/22",      "ETime": "(四)",      "Location": "", "Price": ""},' +
 '{   "Type": "類型",      "STime": "起始時間",      "ETime": "結束時間",      "Location": "地點", "Price": "費用"},' +
 '{   "Type": "交通",      "STime": "08:00",      "ETime": "08:30",      "Location": "起床 (步行)> 神仙雪濃湯", "Price": ""},' +
