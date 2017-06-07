@@ -146,11 +146,11 @@ var sceneModel = JSON.parse('{ "scenes" : [' +
      '"link":["https://www.hanchao.com/contents/spot_detail.html?id=893"],' +
      '"images":""},' +
                             
-'{   "Id": "scene22",      "Name": "Line Friend Store",      "EngName": "",      "KoreaName": "",' +
-    '"Address": "",      "EngAddress": "",      "KoreaAddress": "",' +
-    '"time": "",      "trafficInfo": "",' +
-    '"otherInformation":[""],' +
-     '"link":[""],' +
+'{   "Id": "scene22",      "Name": "Line Friend Store",      "EngName": "",      "KoreaName": "라인프렌즈 플래그십 스토어 명동역점",' +
+    '"Address": "首爾特別市中區明洞8Na街9 1~2F",      "EngAddress": "",      "KoreaAddress": "서울특별시중구명동8나길9 1～2F",' +
+    '"time": "10:00~23:00",      "trafficInfo": "地鐵4號線明洞(Myeong-dong)站6號出口，步行2分鐘",' +
+    '"otherInformation":"",' +
+     '"link":["https://www.hanchao.com/contents/shop_detail.html?id=15653"],' +
      '"images":""}' +
                             
 /*
