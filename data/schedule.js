@@ -65,7 +65,7 @@ var scheduleModel = JSON.parse('{ "schedule" : [' +
 '{   "Type": "交通",      "STime": "12:00",      "ETime": "12:30",      "Location": "北村八景 (步行)> 安國站 (L3)> 景福宮站 (步行)> 土俗村", "Price": "1250*2"},' +
 '{   "Type": "飲食",      "STime": "12:30",      "ETime": "14:00",      "Location": "土俗村參雞湯", "Price": "20000↑"},' +
 '{   "Type": "交通",      "STime": "14:00",      "ETime": "14:10",      "Location": "土俗村 (步行)> 景福宮", "Price": ""},' +
-'{   "Type": "景點",      "STime": "14:10",      "ETime": "17:30",      "Location": "景福宮、光化門、光化門廣場", "Price": ""},' +
+'{   "Type": "景點",      "STime": "14:10",      "ETime": "17:30",      "Location": "景福宮、光化門、光化門廣場", "Price": "3000*2"},' +
 '{   "Type": "交通",      "STime": "17:30",      "ETime": "18:00",      "Location": "光化門廣場 (步行)> 朴家部隊鍋", "Price": ""},' +
 '{   "Type": "飲食",      "STime": "18:00",      "ETime": "19:30",      "Location": "朴家部隊鍋", "Price": "8000↑*2"},' +
 '{   "Type": "",      "STime": "",      "ETime": "",      "Location": "(可採買)", "Price": ""},' +
@@ -80,13 +80,15 @@ var scheduleModel = JSON.parse('{ "schedule" : [' +
 '{   "Type": "交通",      "STime": "12:00",      "ETime": "12:15",      "Location": "梨花洞壁畫村 (步行)> 橋村炸雞", "Price": ""},' +
 '{   "Type": "飲食",      "STime": "12:15",      "ETime": "13:00",      "Location": "橋村炸雞", "Price": "15000↑"},' +
 '{   "Type": "交通",      "STime": "13:00",      "ETime": "13:15",      "Location": "橋村炸雞 (步行)> 昌慶宮", "Price": ""},' +
-'{   "Type": "景點",      "STime": "13:15",      "ETime": "15:30",      "Location": "昌慶宮、昌德宮", "Price": ""},' +
+'{   "Type": "景點",      "STime": "13:15",      "ETime": "15:30",      "Location": "昌慶宮", "Price": "1000*2"},' +
+'{   "Type": "景點",      "STime": "13:15",      "ETime": "15:30",      "Location": "昌德宮", "Price": "3000↑*2"},' +
 '{   "Type": "交通",      "STime": "15:30",      "ETime": "16:00",      "Location": "昌德宮 (步行)> 鐘閣站 (L3)> 忠武路站 (L4)> 明洞站", "Price": "1250*2"},' +
 '{   "Type": "交通",      "STime": "16:00",      "ETime": "16:15",      "Location": "明洞站 (步行)> 姜虎東白丁", "Price": ""},' +
 '{   "Type": "飲食",      "STime": "16:15",      "ETime": "18:00",      "Location": "姜虎東白丁", "Price": "15000↑*2"},' +
 '{   "Type": "",      "STime": "",      "ETime": "",      "Location": "(可採買)", "Price": ""},' +
 '{   "Type": "交通",      "STime": "18:00",      "ETime": "18:45",      "Location": "姜虎東(步行)> 南山電梯搭乘處 (電梯) (纜車)> 南山首爾塔", "Price": ""},' +
-'{   "Type": "景點",      "STime": "18:30",      "ETime": "21:00",      "Location": "南山首爾塔", "Price": ""},' +
+'{   "Type": "景點",      "STime": "18:30",      "ETime": "21:00",      "Location": "南山纜車", "Price": "8500*2"},' +
+'{   "Type": "景點",      "STime": "18:30",      "ETime": "21:00",      "Location": "南山首爾塔", "Price": "10000↑*2"},' +
 '{   "Type": "交通",      "STime": "21:00",      "ETime": "21:30",      "Location": "南山首爾塔 (纜車)> (電梯)> (步行)> 明洞", "Price": ""},' +
 '{   "Type": "",      "STime": "",      "ETime": "",      "Location": "明洞聖堂", "Price": ""},' +
 '{   "Type": "Day7",      "STime": "6/22",      "ETime": "(五)",      "Location": "", "Price": ""},' +
