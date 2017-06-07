@@ -10,6 +10,7 @@ angular.module('seoul', [])
         $scope.restaurants = resturantModel.restaurants;
         $scope.scenes = sceneModel.scenes;
         $scope.schedule = scheduleModel.schedule;
+        $scope.airplane = airplaneModel.airplane;
 
 
         $scope.name = "";
