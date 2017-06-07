@@ -84,7 +84,7 @@ var resturantModel = JSON.parse('{ "restaurants" : [' +
   '"link":["https://www.google.com.tw/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwjX1c7NjKvUAhVIX5QKHcQCBDsQFggqMAE&url=http%3A%2F%2Fshannysnote.pixnet.net%2Fblog%2Fpost%2F351145331-%25E3%2580%2590%25E9%25A6%2596%25E7%2588%25BE%25E9%2580%25A3%25E9%258E%2596%25E9%25A4%2590%25E5%25BB%25B3%25E3%2580%2591%25E7%25B4%25AB%25E8%258F%259C%25E9%25A3%25AF%25E6%258D%25B2%25E5%25A4%25A9%25E5%259C%258B-%25EA%25B9%2580%25EB%25B0%25A5%25EC%25B2%259C%25EA%25B5%25AD-%25E2%259C%2588-&usg=AFQjCNE_BliN2IPiS7Od3trc-PvcUjLX2w","http://place.map.daum.net/14922504"],' +
   '"images":[""]},' +
   
-  '{ "Id": "res",      "Name": "孔陵一隻雞新村店",      "EngName": "",      "KoreaName": "공릉닭한마리",' +
+  '{ "Id": "res13",      "Name": "孔陵一隻雞新村店",      "EngName": "",      "KoreaName": "공릉닭한마리",' +
   '"Address": "西大門區延世路2街77",      "EngAddress": "",      "KoreaAddress": "서울 서대문구 연세로2길 77",' +
   '"time": "11:00～24:00",      "trafficInfo": "地鐵2號線新村(Sinchon)站4號出口，步行6分鐘; 地鐵2號線梨大(Ewha Womans Univ.)站1號出口，步行7分鐘",' +
   '"otherInformation":["中文服務","韓幣、信用卡(JCB、visa、master、amex)"],' +
