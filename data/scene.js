@@ -151,6 +151,12 @@ var sceneModel = JSON.parse('{ "scenes" : [' +
     '"time": "10:00~23:00",      "trafficInfo": "地鐵4號線明洞(Myeong-dong)站6號出口，步行2分鐘",' +
     '"otherInformation":"",' +
      '"link":["https://www.hanchao.com/contents/shop_detail.html?id=15653"],' +
+     '"images":""},' +
+'{   "Id": "scene23",      "Name": "明洞天主教堂",      "EngName": "",      "KoreaName": "명동성당",' +
+    '"Address": "",      "EngAddress": "",      "KoreaAddress": "",' +
+    '"time": "06:30~21:00 ※因设施而异",      "trafficInfo": "",' +
+    '"otherInformation":"",' +
+     '"link":["https://www.hanchao.com/contents/spot_map.html?id=494"],' +
      '"images":""}' +
                             
 /*
