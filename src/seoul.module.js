@@ -11,6 +11,7 @@ angular.module('seoul', [])
         $scope.scenes = sceneModel.scenes;
         $scope.schedule = scheduleModel.schedule;
         $scope.airplane = airplaneModel.airplane;
+        $scope.subway = subwayModel.subways;
 
 
         $scope.name = "";
