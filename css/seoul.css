@@ -131,7 +131,8 @@ th {
 }
 
 div img {
-    width:500px;
+    max-width: 100%;
+
 }
 #restaurant .resInfo:nth-child(even) {
     border: dotted;
