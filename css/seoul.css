@@ -160,8 +160,27 @@ th {
     border-width: thin;
     background-color: #ff9797;
     overflow:scroll;
+     vertical-align:central;
 }
 
+.subwayList {
+    float:left;
+    background-color:#cdf5b6;
+}
+.subwayList:hover {
+     background-color: #E7E7E7;
+}
+
+#subway table a{
+    color:#000000;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    padding:0;
+}
+
+#subway table a:hover{
+      background-color: #E7E7E7;
+}
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
     /* Header */
