@@ -130,6 +130,9 @@ th {
     margin-top: 50px;
 }
 
+div img {
+    width:500px;
+}
 #restaurant .resInfo:nth-child(even) {
     border: dotted;
     border-width: thin;
@@ -163,16 +166,26 @@ th {
      vertical-align:central;
 }
 
-.subwayList {
+.optionList {
     float:left;
     background-color:#cdf5b6;
+    text-align:center;
 }
-.subwayList:hover {
+.optionList:hover {
      background-color: #E7E7E7;
+}
+
+#busInfo {
+    clear:both;
+}
+
+#busInfo a{
+      color:#000000;
 }
 
 #subway table a{
     color:#000000;
+   
 }
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
     padding:0;
@@ -180,6 +193,10 @@ th {
 
 #subway table a:hover{
       background-color: #E7E7E7;
+}
+
+table {
+     text-align:center;
 }
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
