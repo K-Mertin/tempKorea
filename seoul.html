@@ -33,28 +33,28 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">行程表 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class="endpoint">
-                                    <a href="#schedule">行程表</a>
+                                    <a href="#schedule">總表</a>
                                 </li>
                                 <li class="endpoint">
-                                    <a href="#day1">Day 1</a>
+                                    <a href="#Day1">Day 1</a>
                                 </li>
                                 <li class="endpoint">
-                                    <a href="#day2">Day 2</a>
+                                    <a href="#Day2">Day 2</a>
                                 </li>
                                 <li class="endpoint">
-                                    <a href="#day3">Day 3</a>
+                                    <a href="#Day3">Day 3</a>
                                 </li>
                                 <li class="endpoint">
-                                    <a href="#day4">Day 4</a>
+                                    <a href="#Day4">Day 4</a>
                                 </li>
                                 <li class="endpoint">
-                                    <a href="#day5">Day 5</a>
+                                    <a href="#Day5">Day 5</a>
                                 </li>
                                 <li class="endpoint">
-                                    <a href="#day6">Day 6</a>
+                                    <a href="#Day6">Day 6</a>
                                 </li>
                                 <li class="endpoint">
-                                    <a href="#day7">Day 7</a>
+                                    <a href="#Day7">Day 7</a>
                                 </li>
                             </ul>
                         </li>
@@ -105,7 +105,7 @@
 
     <div id="schedule" class="section oddsection">
         <div class="wrap oddwrap">
-            <h2>行程表</h2>
+            <h2>總表</h2>
             <table class="table">
                 <tr ng-repeat="x in schedule">
                     <th ng-if="x.Type == '類型' || x.Type == '類型'">{{ x.Type }}</th>
@@ -122,41 +122,92 @@
             </table>
         </div>
     </div>
-    <div id="day1" class="section evensection">
+
+    <div ng-repeat="s in schedule | unique:'Day'" id="{{s.Day}}" class="section evensection">
         <div class="wrap evenwrap">
-            <h2>day1</h2>
+            <h2>{{s.Type}}-{{s.STime}}-{{s.ETime}}</h2>
+            <table class="table">
+                <tr ng-repeat="x in schedule | filter:{Day: s.Day}" ng-show="$index > 0">
+                    <th ng-if="x.Type == '類型' || x.Type == '類型'">{{ x.Type }}</th>
+                    <td ng-if="x.Type != '類型'">{{ x.Type }}</td>
+                    <th ng-if="x.STime == '起始時間'">{{ x.STime }}</th>
+                    <td ng-if="x.STime != '起始時間'">{{ x.STime }}</td>
+                    <th ng-if="x.ETime == '結束時間'">{{ x.ETime }}</th>
+                    <td ng-if="x.ETime != '結束時間'">{{ x.ETime }}</td>
+                    <th ng-if="x.Location == '地點'">{{ x.Location }}</th>
+                    <td ng-if="x.Location != '地點'">{{ x.Location }}</td>
+                    <th ng-if="x.Price == '費用'">{{ x.Price }}</th>
+                    <td ng-if="x.Price != '費用'">{{ x.Price }}</td>
+                </tr>
+            </table>
+        </div>
+        <div ng-show="s.Day == 'Day1'">
+            <img src="http://www.airport.kr/images/ch/air/sub/img_information_a_01.gif" />
+            <img src="http://www.airport.kr/images/ch/air/sub/img_information_a_02.gif" />
+            <img src="http://cn.ntcdn.net/data/2013/08/29/15/1377759349521ef075e85c3.jpg" />
+            <img src="https://img.joyce8.com/2016-03-09-154002-20.gif" />
+            <img src="http://www.skyparkhotel.com/images/contents/map3_ENG.gif" />
+            <img src="http://www.skyparkhotel.com/images/contents/about_main3.jpg" />
+            <img src="http://www.bamdokkaebi.org/plugins/bamdokkebi/theme/assets/img/sub_ddp/ddp_map.jpg" />
+            <img src="" />
+        </div>
+
+        <div ng-show="s.Day == 'Day2'">
+            <img src="https://img-cdn.hopetrip.com.hk/2016/1103/20161103023653101.jpg" />
+            <img src="https://img.joyce8.com/20160506032316_68.jpg" />
+            <img src="https://img.joyce8.com/20160615065236_33.jpg" />
+            <img src="http://www.bamdokkaebi.org/plugins/bamdokkebi/theme/assets/img/sub_cgc/cgc_map.jpg" />
+        </div>
+        <div ng-show="s.Day == 'Day3'">
+            <img src="https://farm6.staticflickr.com/5257/13838587945_a5c33a1c33.jpg" />
+            <img src="http://tong.visitkorea.or.kr/cms/resource/73/1569173_image2_1.jpg" />
+            <img src="http://img1.daumcdn.net/thumb/R1920x0.q100/?fname=http%3A%2F%2Fpostfiles14.naver.net%2FMjAxNzA2MDNfMTg0%2FMDAxNDk2NDk4MTM3OTI4._MlgeTvyHGopakig7NWwFdFXlCphnPLFjWs1vNQ4HsYg.Sm5wM4b0jxTYvAF3CcPy8llpUUpL0qVnHkj-K3U6Cz0g.JPEG.geolandar%2Fimage_1342016901496497937646.jpg%3Ftype%3Dw966" />
+        </div>
+        <div ng-show="s.Day == 'Day4'">
+            <img src="http://blog.ulifestyle.com.hk/blogger/oasisapril/wp-content/blogs.dir/0/6543/files/2015/11/IMG_3589-640x480.jpg" />
+            <img src="https://blogtw.klook.com/wp-content/uploads/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2016-07-12-%E4%B8%8A%E5%8D%8811.57.54%E6%8B%B7%E8%B2%9D-768x400.jpg" />
+            <img src="https://blogtw.klook.com/wp-content/uploads/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2016-07-12-%E4%B8%8B%E5%8D%881.05.00%E6%8B%B7%E8%B2%9D-768x439.jpg" />
+            <img src="" />
+            <img src="http://www.lawrencenas.com/Adrianne/Blog/201412KR/D6/001.jpg" />
+            <img src="http://www.lawrencenas.com/Adrianne/Blog/201412KR/D6/004.jpg" />
+            <img src="https://imgur.dcard.tw/4wZTG5e.jpg" />
+        </div>
+        <div ng-show="s.Day == 'Day5'">
+            <img src="http://img1.daumcdn.net/thumb/R1920x0.q100/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F145C91494F6C4CDF02" />
+            <img src="https://www.difeny.com/wp-content/uploads/2016/10/1453299783-3997257511.jpg" />
+            <img src="https://img.joyce8.com/20160911032156_17.png" />
+            <img src="http://a.bbkz.net/forum/attachment.php?attachmentid=610514&thumb=1&d=1341423946" />
+            <img src="http://contents.visitseoul.net/file_save/art_img/2011/10/28/20111028160153_0.jpg" />
+            <img src="http://img1.daumcdn.net/thumb/R1920x0.q100/?fname=http%3A%2F%2Fpostfiles3.naver.net%2FMjAxNzA0MjVfMjA3%2FMDAxNDkzMDkzODIwMjIz.YqkqP4gMO0VdZrUVhY4pmDl1wqJNoAA70Tdyr8zrDccg.3JhGOFe2Ggnoo_6FLA2gz_btJTRdKES1l2JqpM2AETwg.JPEG.skrhkdtlr%2FIMG_5196.JPG%3Ftype%3Dw773" />
+        </div>
+        <div ng-show="s.Day == 'Day6'">
+            <img src="https://www.hanchao.com/varimg/photogallery/Article_Photo/213/big_181354.jpg" />
+            <img src="http://www.backpackers.com.tw/forum/attachment.php?attachmentid=179272&d=1268299472" />
+            <img src="http://sa.bbkz.net/forum/attachment.php?attachmentid=2058084&d=1491659130" />
+            <img src="http://img1.daumcdn.net/thumb/R1920x0.q100/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fplace%2FF96344B0A10042D79490532F1257FFDF" />
+            <img src="http://img.koreagaja.com/web_upload/e8d0e867baa5a8bcfb696e7f40d0e730.jpeg" />
+            <img src="http://kpopn.niusnews.com/kupload/imgs/default/2016/01/20160122-khd-1.jpg" />
+            <img src="http://kpopn.niusnews.com/kupload/imgs/default/2016/01/20160122-map.jpg" />
+            <img src="https://2.bp.blogspot.com/-p9PBxkg3Too/UsKD-C10zyI/AAAAAAAAGvM/w7VtF7_EFl8/s400/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7+2013-12-31+%E4%B8%8B%E5%8D%884.04.34.png" />
+            <img src="" />
+            <img src="" />
+            <img src="" />
+
+        </div>
+        <div ng-show="s.Day == 'Day7'">
+            <img src="" />
+            <img src="" />
+            <img src="" />
+            <img src="" />
+            <img src="http://www.lawrencenas.com/Adrianne/Blog/201310KOREA/D2_4/003.jpg" />
+            <img src="" />
+            <img src="" />
+            <img src="" />
+            <img src="" />
+            <img src="" />
         </div>
     </div>
-    <div id="day2" class="section oddsection">
-        <div class="wrap oddwrap">
-            <h2>day2</h2>
-        </div>
-    </div>
-    <div id="day3" class="section evensection">
-        <div class="wrap evenwrap">
-            <h2>day3</h2>
-        </div>
-    </div>
-    <div id="day4" class="section oddsection">
-        <div class="wrap oddwrap">
-            <h2>day4</h2>
-        </div>
-    </div>
-    <div id="day5" class="section evensection">
-        <div class="wrap evenwrap">
-            <h2>day5</h2>
-        </div>
-    </div>
-    <div id="day6" class="section oddsection">
-        <div class="wrap oddwrap">
-            <h2>day6</h2>
-        </div>
-    </div>
-    <div id="day7" class="section evensection">
-        <div class="wrap evenwrap">
-            <h2>day7</h2>
-        </div>
-    </div>
+
     <div id="restaurant" class="section oddsection">
         <div class="wrap oddwrap">
             <h2>餐廳資訊</h2>
@@ -176,7 +227,7 @@
                 </ol>
                 <span>相關連結：</span><br>
                 <ol>
-                    <li ng-repeat="o in n.link"><a href="{{o}}">{{o}}</a></li>
+                    <li ng-repeat="o in n.link"><a target="_blank" href="{{o}}">{{o}}</a></li>
                 </ol>
                 <img ng-repeat="i in n.images" class="img-responsive" ng-src="data/image/{{i}}">
             </div>
@@ -201,7 +252,7 @@
                 </ol>
                 <span>相關連結：</span><br>
                 <ol>
-                    <li ng-repeat="o in n.link"><a href="{{o}}">{{o}}</a></li>
+                    <li ng-repeat="o in n.link"><a target="_blank" href="{{o}}">{{o}}</a></li>
                 </ol>
                 <img ng-repeat="i in n.images" class="img-responsive" ng-src="data/image/{{i}}">
             </div>
@@ -228,6 +279,8 @@
                     <td>{{ x.ArriveTime }}</td>
                 </tr>
             </table>
+            <h3>參考資訊</h3>
+            <a target="_blank" href="http://www.travelnote.tw/korea/etc/hanabank-incheonairport">機場韓亞銀行</a>
         </div>
     </div>
     <div id="bus" class="section evensection">
@@ -237,171 +290,187 @@
             <p>可於入境大廳1樓內部(4號、9號出口旁)與外部(4、6、7、8、11、13號出口旁以及9C位置)設置的機場巴士乘車券售票亭，洽詢欲前往目的地之巴士編號(或路線)，再購買乘車券→確認乘車券上標示之機場巴士乘車處位置→ 前往乘車處確認行車路線及出發時間→發車後，請仔細聆聽車上的到站英語廣播，抵達目的地時即可下車。機場巴士種類</p>
             <p>機場巴士分為高級機場巴士與一般機場巴士兩種。高級機場巴士主要直達位於首爾市區內的各大飯店，比一般機場巴士停靠站數較少，座位數也較少，因而更加舒適。一般機場巴士雖然較高級機場巴士行駛時間長，但停靠站多，四通八達，可輕鬆地前往自己欲到達之目的地。但兩種巴士車資不同，還請遊客注意！</p>
             <h3>機場<->明洞</h3>
+            <div class="busTitle">
+                <div class="optionList col-lg-1 col-md-1 col-sm-1">
+                    <a href="#bus6001">6001</a>
+                </div>
+                <div class="optionList col-lg-1 col-md-1 col-sm-1">
+                    <a href="#bus6015">6015</a>
+                </div>
+            </div>
             <!---6001-->
-            <table cellpadding="0" cellspacing="0" class="" summary="">
-                <colgroup>
-                    <col width="99">
-                    <col width="*">
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th scope="row" class="bg"><font><font>BUS</font></font></th>
-                        <td class="bg">
-                            <p class="prArea">
-                                <strong class="txt"><font><font>高級機場大巴6001路(仁川機場⇔明洞・東大門)</font></font></strong>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><font><font>費用</font></font></th>
-                        <td><font><font>15,000韓元</font></font></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><font><font>乘車站</font></font></th>
-                        <td><font><font>5B、11B</font></font></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><font><font>首班· 末班</font></font></th>
-                        <td>
-                            <strong><font><font>市內方向</font></font></strong><font><font>【平日】05：45、【週末及節假日】06：00 / 【每天】22：40 </font></font>
-                            <br>
-                            <strong><font><font>機場方向</font></font></strong><font><font>【每天】04：30 / 【每天】20：00					</font></font>
-                            <!-- <p><strong>市内方向</strong>【平日】05：35【周末及节假日】05：40 / 【每天】22：50</p> -->
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><font><font>運行間隔</font></font></th>
-                        <td><font><font>20～25分鐘</font></font></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><font><font>途經地</font></font></th>
-                        <td class="linkTd">
-                            <font><font class="">仁川機場5B停車站</font></font><font><font class="">　→　</font></font><font><font class="">仁川機場11B停車站</font></font>
-                            <font><font class="">　→　</font></font><font><font class="">漢江大橋北端(公交專用道)</font></font>
-                            <font><font class="">　→　</font></font><font><font class="">4號線新龍山站(公交專用道)</font></font>
-                            <font><font class=""> (60分鐘) →　</font></font><font><font class="">4・6號線三角地站(公交專用道)</font></font>
-                            <font><font class="">　→　</font></font><font><font class="">4號線淑大入口站(公交專用道)</font></font>
-                            <font><font class=""> (65分鐘) →　</font></font><font><font class="">首爾南山福朋喜來登酒店/葛月洞(公交專用道)</font></font>
-                            <font><font class="">　→　</font></font><font><font class="">首爾火車站</font></font>
-                            <font><font class=""> (68分鐘) →　</font></font><font><font class="">4號線會賢站</font></font>
-                            <font><font class="">　→　</font></font><font><font class="">4號線明洞站</font></font>
-                            <font><font class="">　→　</font></font><font><font class="">退溪路3街/韓屋村</font></font></a><font><font class="">　→　</font></font>
-                            <font><font class="">3・4號線忠武路站</font></font><font><font class="">　→　</font></font>
-                            <font><font class="">Baiton首爾東大門</font></font><font><font class="">　→　</font></font>
-                            <font><font class="">阿卡西亞酒店/東大門Western CO-OP商業公寓</font></font><font><font class=""> (81分鐘) →　</font></font>
-                            <font><font class="">乙支路CO-OP商業公寓</font></font><font><font class=""> (83分鐘) →　</font></font>
-                            <font><font class="">2・4・5號線東大門歷史文化公園站/東大門設計廣場</font></font><font><font class="">　→　</font></font>
-                            <font><font class="">東橫INN首爾東大門/宜必思國賓快捷首爾東大門酒店</font></font><font><font class=""> (88分鐘) →　</font></font>
-                            <font><font class="">退溪路6街/SKYPARK酒店東大門</font></font><font><font class="">　→　</font></font>
-                            <font><font class="">3・4號線忠武路站</font></font><font><font class=""> (91分鐘) →　</font></font>
-                            <font><font class="">明洞Tmark酒店</font></font><font><font class="">　→　</font></font>
-                            <font><font class="">4號線明洞站</font></font><font><font class=""> (93分鐘) →　</font></font>
-                            <font><font class="">南大門市場</font></font><font><font class="">　→　</font></font>
-                            <font><font class="">首爾火車站(公交專用道)</font></font><font><font class="">　→　</font></font>
-                            <font><font class="">首爾南山福朋喜來登酒店/葛月洞(公交專用道)</font></font><font><font class="">　→　</font></font>
-                            <font><font class="">4號線淑大入口站(公交專用道) </font></font><font><font>　→　</font></font>
-                            <font><font>4・6號線三角地站(公交專用道)</font></font><font><font>　→　</font></font>
-                            <font><font>4號線新龍山站(公交專用道)</font></font><font><font>　→　</font></font>
-                            <font><font>漢江大橋北端(公交專用道)</font></font><font><font>　→　</font></font>
-                            <font><font>仁川機場3層9號停車站</font></font></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><font><font>備註</font></font></th>
-                        <td><font><font>※【機場方向】的首班車和末班車時間以“Baiton首爾東大門”為準。</font></font>
-                            <br>
-                            <font><font>※乘車時使用交通卡優惠1,000韓元(市內方向、機場方向都適用)；在仁川機場購買市內方向的車票時也優惠1,000韓元。</font></font></td>
-                    </tr>
-                    <!-- 				<div style="text-align:right; padding:2px 0px;">
+            <div id="busInfo">
+                <table id="bus6001" cellpadding="0" cellspacing="0" class="" summary="">
+                    <colgroup>
+                        <col width="99">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="bg"><font><font>BUS</font></font></th>
+                            <td class="bg">
+                                <p class="prArea">
+                                    <strong class="txt"><font><font>高級機場大巴6001路(仁川機場⇔明洞・東大門)</font></font></strong>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><font><font>費用</font></font></th>
+                            <td><font><font>15,000韓元</font></font></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><font><font>乘車站</font></font></th>
+                            <td><font><font>5B、11B</font></font></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><font><font>首班· 末班</font></font></th>
+                            <td>
+                                <strong><font><font>市內方向</font></font></strong><font><font>【平日】05：45、【週末及節假日】06：00 / 【每天】22：40 </font></font>
+                                <br>
+                                <strong><font><font>機場方向</font></font></strong><font><font>【每天】04：30 / 【每天】20：00					</font></font>
+                                <!-- <p><strong>市内方向</strong>【平日】05：35【周末及节假日】05：40 / 【每天】22：50</p> -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><font><font>運行間隔</font></font></th>
+                            <td><font><font>20～25分鐘</font></font></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><font><font>途經地</font></font></th>
+                            <td class="linkTd">
+                                <font><font class="">仁川機場5B停車站</font></font><font><font class="">　→　</font></font><font><font class="">仁川機場11B停車站</font></font>
+                                <font><font class="">　→　</font></font><font><font class="">漢江大橋北端(公交專用道)</font></font>
+                                <font><font class="">　→　</font></font><font><font class="">4號線新龍山站(公交專用道)</font></font>
+                                <font><font class=""> (60分鐘) →　</font></font><font><font class="">4・6號線三角地站(公交專用道)</font></font>
+                                <font><font class="">　→　</font></font><font><font class="">4號線淑大入口站(公交專用道)</font></font>
+                                <font><font class=""> (65分鐘) →　</font></font><font><font class="">首爾南山福朋喜來登酒店/葛月洞(公交專用道)</font></font>
+                                <font><font class="">　→　</font></font><font><font class="">首爾火車站</font></font>
+                                <font><font class=""> (68分鐘) →　</font></font><font><font class="">4號線會賢站</font></font>
+                                <font><font class="">　→　</font></font><font><font class="">4號線明洞站</font></font>
+                                <font><font class="">　→　</font></font><font><font class="">退溪路3街/韓屋村</font></font></a><font><font class="">　→　</font></font>
+                                <font><font class="">3・4號線忠武路站</font></font><font><font class="">　→　</font></font>
+                                <font><font class="">Baiton首爾東大門</font></font><font><font class="">　→　</font></font>
+                                <font><font class="">阿卡西亞酒店/東大門Western CO-OP商業公寓</font></font><font><font class=""> (81分鐘) →　</font></font>
+                                <font><font class="">乙支路CO-OP商業公寓</font></font><font><font class=""> (83分鐘) →　</font></font>
+                                <font><font class="">2・4・5號線東大門歷史文化公園站/東大門設計廣場</font></font><font><font class="">　→　</font></font>
+                                <font><font class="">東橫INN首爾東大門/宜必思國賓快捷首爾東大門酒店</font></font><font><font class=""> (88分鐘) →　</font></font>
+                                <font><font class="">退溪路6街/SKYPARK酒店東大門</font></font><font><font class="">　→　</font></font>
+                                <font><font class="">3・4號線忠武路站</font></font><font><font class=""> (91分鐘) →　</font></font>
+                                <font><font class="">明洞Tmark酒店</font></font><font><font class="">　→　</font></font>
+                                <font><font class="">4號線明洞站</font></font><font><font class=""> (93分鐘) →　</font></font>
+                                <font><font class="">南大門市場</font></font><font><font class="">　→　</font></font>
+                                <font><font class="">首爾火車站(公交專用道)</font></font><font><font class="">　→　</font></font>
+                                <font><font class="">首爾南山福朋喜來登酒店/葛月洞(公交專用道)</font></font><font><font class="">　→　</font></font>
+                                <font><font class="">4號線淑大入口站(公交專用道) </font></font><font><font>　→　</font></font>
+                                <font><font>4・6號線三角地站(公交專用道)</font></font><font><font>　→　</font></font>
+                                <font><font>4號線新龍山站(公交專用道)</font></font><font><font>　→　</font></font>
+                                <font><font>漢江大橋北端(公交專用道)</font></font><font><font>　→　</font></font>
+                                <font><font>仁川機場3層9號停車站</font></font></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><font><font>備註</font></font></th>
+                            <td><font><font>※【機場方向】的首班車和末班車時間以“Baiton首爾東大門”為準。</font></font>
+                                <br>
+                                <font><font>※乘車時使用交通卡優惠1,000韓元(市內方向、機場方向都適用)；在仁川機場購買市內方向的車票時也優惠1,000韓元。</font></font></td>
+                        </tr>
+                        <!-- 				<div style="text-align:right; padding:2px 0px;">
 											※所需时间随路况而异，敬请留意。
 									</div>
 			 -->
-                </tbody>
-            </table>
-            <p></p>
-            <!---6015-->
-            <table cellpadding="0" cellspacing="0" class="" summary="">
-                <colgroup>
-                    <col width="99">
-                    <col width="*">
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th scope="row" class="bg"><font><font>BUS</font></font></th>
-                        <td class="bg">
-                            <p class="prArea">
+                    </tbody>
+                </table>
+                <a href="#bus">回巴士資訊</a>
+                <p></p>
+                <!---6015-->
+                <table id="bus6015" cellpadding="0" cellspacing="0" class="" summary="">
+                    <colgroup>
+                        <col width="99">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="bg"><font><font>BUS</font></font></th>
+                            <td class="bg">
+                                <p class="prArea">
 
-                                <strong class="txt"><font><font>高級機場大巴6015路(仁川機場⇔明洞・東大門)</font></font></strong>
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><font><font>費用</font></font></th>
-                        <td><font><font>15,000韓元</font></font></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><font><font>乘車站</font></font></th>
-                        <td><font><font>5B、11B</font></font></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><font><font>首班· 末班</font></font></th>
-                        <td>
-                            <strong><font><font>市內方向</font></font></strong><font><font>【平日】05：35【週末及節假日】05：40 / 【每天】22：50 </font></font>
-                            <br>
-                            <strong><font><font>機場方向</font></font></strong><font><font>【每天】04：25 / 【每天】20：20					</font></font>
-                            <!-- <p><strong>市内方向</strong>【平日】05：35【周末及节假日】05：40 / 【每天】22：50</p> -->
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><font><font>運行間隔</font></font></th>
-                        <td><font><font>8～12分鐘</font></font></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><font><font>途經地</font></font></th>
-                        <td class="linkTd">
-                            <font><font>仁川機場5B停車站</font></font><font><font>　→　</font></font>
-                            <font><font>仁川機場11B停車站</font></font><font><font>　→　</font></font>
-                            <font><font>最佳西方首爾花園酒店/5號線麻浦站(公交專用道)</font></font><font><font> (45分鐘) →　</font></font>
-                            <font><font>5・6號線孔德站/麻浦樂天城市酒店/麻浦新羅舒泰(公交專用道)</font></font><font><font> (50分鐘) →　</font></font>
-                            <font><font>阿峴洞居委會(公交專用道)</font></font><font><font>　→　</font></font>
-                            <font><font>麻浦警察局(公交專用道)</font></font><font><font> (55分鐘) →　</font></font>
-                            <font><font>阿峴小學/5號線兒嶺站(公交專用道)</font></font><font><font>　→　</font></font>
-                            <font><font>2・5號線忠正路站</font></font><font><font> (60分鐘) →　</font></font>
-                            <font><font>首爾布朗斯維特酒店/韓國經濟報社</font></font><font><font>　→　</font></font>
-                            <font><font>首爾站</font></font><font><font> (65分鐘) →　</font></font>
-                            <font><font>南大門市場</font></font><font><font> (67分鐘) →　</font></font>
-                            <font><font>宜必思首爾明洞酒店</font></font><font><font> (70分鐘) →　</font></font>
-                            <font><font>首爾皇家酒店/2號線乙支路入口站</font></font><font><font> (73分鐘) →　</font></font>
-                            <font><font>乙支路2街</font></font><font><font>　→　</font></font>
-                            <font><font>最佳西方國都酒店/2・5號線乙支路4街站</font></font><font><font> (75分鐘) →　</font></font>
-                            <font><font>碧茲酒店</font></font><font><font>　→　</font></font>
-                            <font><font>3・4號線忠武路站</font></font><font><font> (78分鐘) →　</font></font>
-                            <font><font>明洞Tmark酒店</font></font><font><font>　→　</font></font>
-                            <font><font>4號線明洞站</font></font><font><font> (80分鐘) →　</font></font>
-                            <font><font>南大門市場</font></font><font><font>　→　</font></font>
-                            <font><font>首爾站</font></font><font><font>　→　</font></font>
-                            <font><font>首爾布朗斯維特酒店/韓國經濟報社</font></font><font><font>　→　</font></font>
-                            <font><font>2・5號線忠正路站</font></font><font><font>　→　</font></font>
-                            <font><font>阿峴小學/5號線兒嶺站(公交專用道)</font></font><font><font>　→　</font></font>
-                            <font><font>麻浦警察局(公交專用道)</font></font><font><font>　→　</font></font>
-                            <font><font>阿峴洞居委會( </font><font>公交專用道)</font></font><font><font>　→　</font></font>
-                            <font><font>5・6號線孔德站/麻浦樂天城市酒店/麻浦新羅舒泰(公交專用道)</font></font><font><font>　→　</font></font>
-                            <font><font>最佳西方首爾花園酒店/5號線麻浦站</font></font><font><font>　→　</font></font>
-                            <font><font>仁川機場3層9號停車站</font></font></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><font><font>備註</font></font></th>
-                        <td><font><font>※【機場方向】的首班車和末班車時間以“宜必思明洞酒店”為準。</font></font>
-                            <br>
-                            <font><font>
+                                    <strong class="txt"><font><font>高級機場大巴6015路(仁川機場⇔明洞・東大門)</font></font></strong>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><font><font>費用</font></font></th>
+                            <td><font><font>15,000韓元</font></font></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><font><font>乘車站</font></font></th>
+                            <td><font><font>5B、11B</font></font></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><font><font>首班· 末班</font></font></th>
+                            <td>
+                                <strong><font><font>市內方向</font></font></strong><font><font>【平日】05：35【週末及節假日】05：40 / 【每天】22：50 </font></font>
+                                <br>
+                                <strong><font><font>機場方向</font></font></strong><font><font>【每天】04：25 / 【每天】20：20					</font></font>
+                                <!-- <p><strong>市内方向</strong>【平日】05：35【周末及节假日】05：40 / 【每天】22：50</p> -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><font><font>運行間隔</font></font></th>
+                            <td><font><font>8～12分鐘</font></font></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><font><font>途經地</font></font></th>
+                            <td class="linkTd">
+                                <font><font>仁川機場5B停車站</font></font><font><font>　→　</font></font>
+                                <font><font>仁川機場11B停車站</font></font><font><font>　→　</font></font>
+                                <font><font>最佳西方首爾花園酒店/5號線麻浦站(公交專用道)</font></font><font><font> (45分鐘) →　</font></font>
+                                <font><font>5・6號線孔德站/麻浦樂天城市酒店/麻浦新羅舒泰(公交專用道)</font></font><font><font> (50分鐘) →　</font></font>
+                                <font><font>阿峴洞居委會(公交專用道)</font></font><font><font>　→　</font></font>
+                                <font><font>麻浦警察局(公交專用道)</font></font><font><font> (55分鐘) →　</font></font>
+                                <font><font>阿峴小學/5號線兒嶺站(公交專用道)</font></font><font><font>　→　</font></font>
+                                <font><font>2・5號線忠正路站</font></font><font><font> (60分鐘) →　</font></font>
+                                <font><font>首爾布朗斯維特酒店/韓國經濟報社</font></font><font><font>　→　</font></font>
+                                <font><font>首爾站</font></font><font><font> (65分鐘) →　</font></font>
+                                <font><font>南大門市場</font></font><font><font> (67分鐘) →　</font></font>
+                                <font><font>宜必思首爾明洞酒店</font></font><font><font> (70分鐘) →　</font></font>
+                                <font><font>首爾皇家酒店/2號線乙支路入口站</font></font><font><font> (73分鐘) →　</font></font>
+                                <font><font>乙支路2街</font></font><font><font>　→　</font></font>
+                                <font><font>最佳西方國都酒店/2・5號線乙支路4街站</font></font><font><font> (75分鐘) →　</font></font>
+                                <font><font>碧茲酒店</font></font><font><font>　→　</font></font>
+                                <font><font>3・4號線忠武路站</font></font><font><font> (78分鐘) →　</font></font>
+                                <font><font>明洞Tmark酒店</font></font><font><font>　→　</font></font>
+                                <font><font>4號線明洞站</font></font><font><font> (80分鐘) →　</font></font>
+                                <font><font>南大門市場</font></font><font><font>　→　</font></font>
+                                <font><font>首爾站</font></font><font><font>　→　</font></font>
+                                <font><font>首爾布朗斯維特酒店/韓國經濟報社</font></font><font><font>　→　</font></font>
+                                <font><font>2・5號線忠正路站</font></font><font><font>　→　</font></font>
+                                <font><font>阿峴小學/5號線兒嶺站(公交專用道)</font></font><font><font>　→　</font></font>
+                                <font><font>麻浦警察局(公交專用道)</font></font><font><font>　→　</font></font>
+                                <font><font>阿峴洞居委會( </font><font>公交專用道)</font></font><font><font>　→　</font></font>
+                                <font><font>5・6號線孔德站/麻浦樂天城市酒店/麻浦新羅舒泰(公交專用道)</font></font><font><font>　→　</font></font>
+                                <font><font>最佳西方首爾花園酒店/5號線麻浦站</font></font><font><font>　→　</font></font>
+                                <font><font>仁川機場3層9號停車站</font></font></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><font><font>備註</font></font></th>
+                            <td><font><font>※【機場方向】的首班車和末班車時間以“宜必思明洞酒店”為準。</font></font>
+                                <br>
+                                <font><font>
 ※乘車時使用交通卡優惠1,000韓元(市內方向、機場方向都適用)；在仁川機場購買市內方向的車票時也優惠1,000韓元。</font></font></td>
-                    </tr>
-                    <!-- 				<div style="text-align:right; padding:2px 0px;">
+                        </tr>
+                        <!-- 				<div style="text-align:right; padding:2px 0px;">
 											※所需时间随路况而异，敬请留意。
 									</div>
 			 -->
-                </tbody>
-            </table>
-
+                    </tbody>
+                </table>
+                <a href="#bus">回巴士資訊</a>
+            </div>
+            <h3>參考資訊</h3>
+            <ul>
+                <li><a target="_blank" href="http://www.airportlimousine.co.kr/eng/lbr/lbr03_1_8.php">機場巴士時刻表</a></li>
+                <li><a target="_blank" href="http://big5chinese.visitkorea.or.kr/cht/TR/TR_CH_5_11.jsp">機場<=>首爾</a></li>
+            </ul>
         </div>
     </div>
     <div id="subway" class="section oddsection">
@@ -409,7 +478,7 @@
             <h2>地鐵資訊</h2>
             <h3>各站地鐵資訊</h3>
             <div class="subwayTitle">
-                <div ng-repeat="x in subway" ng-if="x.Line == '路線'" class="subwayList col-lg-1 col-md-1 col-sm-1">
+                <div ng-repeat="x in subway" ng-if="x.Line == '路線'" class="optionList col-lg-1 col-md-1 col-sm-1">
                     <a href="#{{x.Id}}">{{x.Id}}</a>
                 </div>
             </div>
@@ -433,10 +502,9 @@
             </table>
             <h3>參考資訊</h3>
             <ul>
-
-                <li><a href="http://www.smrt.co.kr/program/cyberStation/main2.jsp?lang=c1#">地鐵圖</a></li>
-                <li><a href="http://map.daum.net/">韓文地圖</a></li>
-                <li><a href="http://big5chinese.visitkorea.or.kr/cht/TR/TR_CH_5_7.jsp">韓國觀光公社</a></li>
+                <li><a target="_blank" href="http://www.smrt.co.kr/program/cyberStation/main2.jsp?lang=c1#">地鐵圖</a></li>
+                <li><a target="_blank" href="http://map.daum.net/">韓文地圖</a></li>
+                <li><a target="_blank" href="http://big5chinese.visitkorea.or.kr/cht/TR/TR_CH_5_7.jsp">韓國觀光公社</a></li>
             </ul>
 
         </div>
@@ -444,6 +512,9 @@
     <div id="notification" class="section evensection">
         <div class="wrap evenwrap">
             <h2>注意事項</h2>
+
+
+
         </div>
     </div>
 
@@ -451,6 +522,7 @@
     <script src="lib/jquery-2.1.4.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
     <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-filter.min.js"></script>
     <!-- Models -->
     <script src="data/restaurant.js"></script>
     <script src="data/scene.js"></script>
