@@ -3,7 +3,7 @@
 /**
  * Restaurant module that includes the public module as a dependency
  */
-angular.module('seoul', [])
+angular.module('seoul', ['angular.filter'])
     .controller('seoulController', function ($scope, $http) {
 
         
