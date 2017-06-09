@@ -143,7 +143,7 @@ var sceneModel = JSON.parse('{ "scenes" : [' +
     '"Address": "首爾特別市中區小波路83",      "EngAddress": "",      "KoreaAddress": "서울특별시중구소파로83",' +
     '"time": "10:00~23:00 (運行間隔為10分鐘) ※週五～週日、節假日有可能延長營業時間",      "trafficInfo": "地鐵4號線明洞(Myeong-dong)站從3號出口步行至纜車站約需15分鐘; 地鐵4號線明洞(Myeong-dong)站從3號出口步行至南山乘電梯處約需10分鐘",' +
     '"otherInformation":["門票","來回:8500","單程:6000"],' +
-     '"link":["https://www.hanchao.com/contents/spot_detail.html?id=893"],' +
+     '"link":["https://www.hanchao.com/contents/spot_detail.html?id=893","http://rainieis.tw/blog/post/30865093-%5B%E9%9F%93%E5%9C%8B%5D-%E9%A6%96%E7%88%BE-seoul-%7C-n%E9%A6%96%E7%88%BE%E5%A1%94---%EC%97%94-%EC%84%9C%EC%9A%B8%ED%83%80%EC%9B%8C---n-se"],' +
      '"images":""},' +
                             
 '{   "Id": "scene22",      "Name": "Line Friend Store",      "EngName": "",      "KoreaName": "라인프렌즈 플래그십 스토어 명동역점",' +
@@ -153,10 +153,10 @@ var sceneModel = JSON.parse('{ "scenes" : [' +
      '"link":["https://www.hanchao.com/contents/shop_detail.html?id=15653"],' +
      '"images":""},' +
 '{   "Id": "scene23",      "Name": "明洞天主教堂",      "EngName": "",      "KoreaName": "명동성당",' +
-    '"Address": "",      "EngAddress": "",      "KoreaAddress": "",' +
-    '"time": "06:30~21:00 ※因设施而异",      "trafficInfo": "",' +
+    '"Address": "首爾特別市中區明洞街74",      "EngAddress": "",      "KoreaAddress": "서울특별시중구명동길74",' +
+    '"time": "06:30~21:00 ※因设施而异",      "trafficInfo": "地鐵4號線明洞(Myeong-dong)站8號出口，步行約8分鐘",' +
     '"otherInformation":"",' +
-     '"link":["https://www.hanchao.com/contents/spot_map.html?id=494"],' +
+     '"link":["https://www.hanchao.com/contents/spot_map.html?id=494","http://vilookup01.pixnet.net/blog/post/315107472-%E3%80%90%E9%80%80%E7%A8%85%E3%80%91%E9%9F%93%E5%9C%8B%E6%97%85%E9%81%8A%E9%80%80%E7%A8%85%E6%95%99%E5%AD%B8~2015%E5%B9%B47%E6%9C%88%E6%9C%80%E6%96%B0%E7%89%88%EF%BC%8C"],' +
      '"images":""}' +
                             
 /*

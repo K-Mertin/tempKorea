@@ -88,8 +88,20 @@
                                 </li>
                             </ul>
                         </li>
+                        <li id="notification-list" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">注意事項 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="endpoint">
+                                    <a href="#refund">退稅相關</a>
+                                </li>
+                                <li class="endpoint">
+                                    <a href="#buylist">採買清單</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="endpoint">
                             <a href="#notification">注意事項</a>
+                            
                         </li>
 
                     </ul>
@@ -142,69 +154,116 @@
             </table>
         </div>
         <div ng-show="s.Day == 'Day1'">
-            <img src="http://www.airport.kr/images/ch/air/sub/img_information_a_01.gif" />
-            <img src="http://www.airport.kr/images/ch/air/sub/img_information_a_02.gif" />
-            <img src="http://cn.ntcdn.net/data/2013/08/29/15/1377759349521ef075e85c3.jpg" />
-            <img src="https://img.joyce8.com/2016-03-09-154002-20.gif" />
-            <img src="http://www.skyparkhotel.com/images/contents/map3_ENG.gif" />
-            <img src="http://www.skyparkhotel.com/images/contents/about_main3.jpg" />
-            <img src="http://www.bamdokkaebi.org/plugins/bamdokkebi/theme/assets/img/sub_ddp/ddp_map.jpg" />
-            <img src="" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-1.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-2.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-3.jpg" />
+            <p>其他資訊</p>
+            <a href="http://www.airport.kr/images/ch/air/sub/img_information_a_01.gif">1 </a>
+            <a href="http://www.airport.kr/images/ch/air/sub/img_information_a_02.gif" >2</a>
+            <a href="http://cn.ntcdn.net/data/2013/08/29/15/1377759349521ef075e85c3.jpg" >3</a>
+            <a href="https://img.joyce8.com/2016-03-09-154002-20.gif" >4</a>
+            <a href="http://www.skyparkhotel.com/images/contents/map3_ENG.gif" >5</a>
+            <a href="http://www.skyparkhotel.com/images/contents/about_main3.jpg" >6</a>
+            <a href="http://www.bamdokkaebi.org/plugins/bamdokkebi/theme/assets/img/sub_ddp/ddp_map.jpg" >7</a>
         </div>
 
         <div ng-show="s.Day == 'Day2'">
-            <img src="https://img-cdn.hopetrip.com.hk/2016/1103/20161103023653101.jpg" />
-            <img src="https://img.joyce8.com/20160506032316_68.jpg" />
-            <img src="https://img.joyce8.com/20160615065236_33.jpg" />
-            <img src="http://www.bamdokkaebi.org/plugins/bamdokkebi/theme/assets/img/sub_cgc/cgc_map.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-1.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-2.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-3.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-4.jpg" />
+             <p>其他資訊</p>
+            <a href="https://img-cdn.hopetrip.com.hk/2016/1103/20161103023653101.jpg" >1</a>
+            <a href="https://img.joyce8.com/20160506032316_68.jpg" >2</a>
+            <a href="https://img.joyce8.com/20160615065236_33.jpg" >3</a>
+            <a href="http://www.bamdokkaebi.org/plugins/bamdokkebi/theme/assets/img/sub_cgc/cgc_map.jpg" >4</a>
         </div>
         <div ng-show="s.Day == 'Day3'">
-            <img src="https://farm6.staticflickr.com/5257/13838587945_a5c33a1c33.jpg" />
-            <img src="http://tong.visitkorea.or.kr/cms/resource/73/1569173_image2_1.jpg" />
-            <img src="http://img1.daumcdn.net/thumb/R1920x0.q100/?fname=http%3A%2F%2Fpostfiles14.naver.net%2FMjAxNzA2MDNfMTg0%2FMDAxNDk2NDk4MTM3OTI4._MlgeTvyHGopakig7NWwFdFXlCphnPLFjWs1vNQ4HsYg.Sm5wM4b0jxTYvAF3CcPy8llpUUpL0qVnHkj-K3U6Cz0g.JPEG.geolandar%2Fimage_1342016901496497937646.jpg%3Ftype%3Dw966" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-1.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-2.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-3.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-4.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-5.jpg" />
+             <p>其他資訊</p>
+            <a href="https://farm6.staticflickr.com/5257/13838587945_a5c33a1c33.jpg" >1</a>
+            <a href="http://tong.visitkorea.or.kr/cms/resource/73/1569173_image2_1.jpg" >2</a>
+            <a href="http://img1.daumcdn.net/thumb/R1920x0.q100/?fname=http%3A%2F%2Fpostfiles14.naver.net%2FMjAxNzA2MDNfMTg0%2FMDAxNDk2NDk4MTM3OTI4._MlgeTvyHGopakig7NWwFdFXlCphnPLFjWs1vNQ4HsYg.Sm5wM4b0jxTYvAF3CcPy8llpUUpL0qVnHkj-K3U6Cz0g.JPEG.geolandar%2Fimage_1342016901496497937646.jpg%3Ftype%3Dw966" >3</a>
         </div>
         <div ng-show="s.Day == 'Day4'">
-            <img src="http://blog.ulifestyle.com.hk/blogger/oasisapril/wp-content/blogs.dir/0/6543/files/2015/11/IMG_3589-640x480.jpg" />
-            <img src="https://blogtw.klook.com/wp-content/uploads/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2016-07-12-%E4%B8%8A%E5%8D%8811.57.54%E6%8B%B7%E8%B2%9D-768x400.jpg" />
-            <img src="https://blogtw.klook.com/wp-content/uploads/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2016-07-12-%E4%B8%8B%E5%8D%881.05.00%E6%8B%B7%E8%B2%9D-768x439.jpg" />
-            <img src="" />
-            <img src="http://www.lawrencenas.com/Adrianne/Blog/201412KR/D6/001.jpg" />
-            <img src="http://www.lawrencenas.com/Adrianne/Blog/201412KR/D6/004.jpg" />
-            <img src="https://imgur.dcard.tw/4wZTG5e.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-1.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-2.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-3.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-4.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-5.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-6.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-7.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-8.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-9.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-10.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-11.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-12.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-13.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-14.jpg" />
+             <p>其他資訊</p>
+            <a href="http://blog.ulifestyle.com.hk/blogger/oasisapril/wp-content/blogs.dir/0/6543/files/2015/11/IMG_3589-640x480.jpg" >1</a>
+            <a href="https://blogtw.klook.com/wp-content/uploads/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2016-07-12-%E4%B8%8A%E5%8D%8811.57.54%E6%8B%B7%E8%B2%9D-768x400.jpg" >2</a>
+            <a href="https://blogtw.klook.com/wp-content/uploads/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2016-07-12-%E4%B8%8B%E5%8D%881.05.00%E6%8B%B7%E8%B2%9D-768x439.jpg" >3</a>
+            <a href="http://www.lawrencenas.com/Adrianne/Blog/201412KR/D6/001.jpg" >4</a>
+            <a href="http://www.lawrencenas.com/Adrianne/Blog/201412KR/D6/004.jpg" >5</a>
+            <a href="https://imgur.dcard.tw/4wZTG5e.jpg" >6</a>
         </div>
         <div ng-show="s.Day == 'Day5'">
-            <img src="http://img1.daumcdn.net/thumb/R1920x0.q100/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F145C91494F6C4CDF02" />
-            <img src="https://www.difeny.com/wp-content/uploads/2016/10/1453299783-3997257511.jpg" />
-            <img src="https://img.joyce8.com/20160911032156_17.png" />
-            <img src="http://a.bbkz.net/forum/attachment.php?attachmentid=610514&thumb=1&d=1341423946" />
-            <img src="http://contents.visitseoul.net/file_save/art_img/2011/10/28/20111028160153_0.jpg" />
-            <img src="http://img1.daumcdn.net/thumb/R1920x0.q100/?fname=http%3A%2F%2Fpostfiles3.naver.net%2FMjAxNzA0MjVfMjA3%2FMDAxNDkzMDkzODIwMjIz.YqkqP4gMO0VdZrUVhY4pmDl1wqJNoAA70Tdyr8zrDccg.3JhGOFe2Ggnoo_6FLA2gz_btJTRdKES1l2JqpM2AETwg.JPEG.skrhkdtlr%2FIMG_5196.JPG%3Ftype%3Dw773" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-1.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-2.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-3.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-4.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-5.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-6.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-7.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-8.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-9.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-10.jpg" />
+             <p>其他資訊</p>
+            <a href="http://img1.daumcdn.net/thumb/R1920x0.q100/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F145C91494F6C4CDF02" >1</a>
+            <a href="https://www.difeny.com/wp-content/uploads/2016/10/1453299783-3997257511.jpg" >2</a>
+            <a href="https://img.joyce8.com/20160911032156_17.png" >3</a>
+            <a href="http://a.bbkz.net/forum/attachment.php?attachmentid=610514&thumb=1&d=1341423946" >4</a>
+            <a href="http://contents.visitseoul.net/file_save/art_img/2011/10/28/20111028160153_0.jpg" >5</a>
+            <a href="http://img1.daumcdn.net/thumb/R1920x0.q100/?fname=http%3A%2F%2Fpostfiles3.naver.net%2FMjAxNzA0MjVfMjA3%2FMDAxNDkzMDkzODIwMjIz.YqkqP4gMO0VdZrUVhY4pmDl1wqJNoAA70Tdyr8zrDccg.3JhGOFe2Ggnoo_6FLA2gz_btJTRdKES1l2JqpM2AETwg.JPEG.skrhkdtlr%2FIMG_5196.JPG%3Ftype%3Dw773" >6</a>
         </div>
         <div ng-show="s.Day == 'Day6'">
-            <img src="https://www.hanchao.com/varimg/photogallery/Article_Photo/213/big_181354.jpg" />
-            <img src="http://www.backpackers.com.tw/forum/attachment.php?attachmentid=179272&d=1268299472" />
-            <img src="http://sa.bbkz.net/forum/attachment.php?attachmentid=2058084&d=1491659130" />
-            <img src="http://img1.daumcdn.net/thumb/R1920x0.q100/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fplace%2FF96344B0A10042D79490532F1257FFDF" />
-            <img src="http://img.koreagaja.com/web_upload/e8d0e867baa5a8bcfb696e7f40d0e730.jpeg" />
-            <img src="http://kpopn.niusnews.com/kupload/imgs/default/2016/01/20160122-khd-1.jpg" />
-            <img src="http://kpopn.niusnews.com/kupload/imgs/default/2016/01/20160122-map.jpg" />
-            <img src="https://2.bp.blogspot.com/-p9PBxkg3Too/UsKD-C10zyI/AAAAAAAAGvM/w7VtF7_EFl8/s400/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7+2013-12-31+%E4%B8%8B%E5%8D%884.04.34.png" />
-            <img src="" />
-            <img src="" />
-            <img src="" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-1.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-2.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-3.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-4.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-5.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-6.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-7.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-8.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-9.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-10.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-11.jpg" />
+             <p>其他資訊</p>
+            <a href="https://www.hanchao.com/varimg/photogallery/Article_Photo/213/big_181354.jpg" >1</a>
+            <a href="http://www.backpackers.com.tw/forum/attachment.php?attachmentid=179272&d=1268299472" >2</a>
+            <a href="http://sa.bbkz.net/forum/attachment.php?attachmentid=2058084&d=1491659130" >3</a>
+            <a href="http://img1.daumcdn.net/thumb/R1920x0.q100/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fplace%2FF96344B0A10042D79490532F1257FFDF" >4</a>
+            <a href="http://img.koreagaja.com/web_upload/e8d0e867baa5a8bcfb696e7f40d0e730.jpeg" >5</a>
+            <a href="http://kpopn.niusnews.com/kupload/imgs/default/2016/01/20160122-khd-1.jpg" >6</a>
+            <a href="http://kpopn.niusnews.com/kupload/imgs/default/2016/01/20160122-map.jpg" >7</a>
+            <a href="https://2.bp.blogspot.com/-p9PBxkg3Too/UsKD-C10zyI/AAAAAAAAGvM/w7VtF7_EFl8/s400/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7+2013-12-31+%E4%B8%8B%E5%8D%884.04.34.png" >8</a>
 
         </div>
         <div ng-show="s.Day == 'Day7'">
-            <img src="" />
-            <img src="" />
-            <img src="" />
-            <img src="" />
-            <img src="http://www.lawrencenas.com/Adrianne/Blog/201310KOREA/D2_4/003.jpg" />
-            <img src="" />
-            <img src="" />
-            <img src="" />
-            <img src="" />
-            <img src="" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-1.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-2.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-3.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-4.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-5.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-6.jpg" />
+            <img src="./img/{{s.Day}}/{{s.Day}}-7.jpg" />
+             <p>其他資訊</p>
+            <a href="http://www.lawrencenas.com/Adrianne/Blog/201310KOREA/D2_4/003.jpg" >1</a>
         </div>
     </div>
 
@@ -379,7 +438,8 @@
 			 -->
                     </tbody>
                 </table>
-                <a href="#bus">回巴士資訊</a>
+                <img src="./img/bus/6001-1.jpg" />
+                <img src="./img/bus/6001-2.jpg" />
                 <p></p>
                 <!---6015-->
                 <table id="bus6015" cellpadding="0" cellspacing="0" class="" summary="">
@@ -464,7 +524,8 @@
 			 -->
                     </tbody>
                 </table>
-                <a href="#bus">回巴士資訊</a>
+                <img src="./img/bus/6015-1.jpg" />
+                <img src="./img/bus/6015-2.jpg" />
             </div>
             <h3>參考資訊</h3>
             <ul>
@@ -509,12 +570,16 @@
 
         </div>
     </div>
-    <div id="notification" class="section evensection">
+    <div id="refund" class="section evensection">
         <div class="wrap evenwrap">
-            <h2>注意事項</h2>
-
-
-
+            <h2>退稅相關</h2>
+            <img src="./img/refund/refund-1.jpg" />
+            <img src="./img/refund/refund-2.jpg" />
+        </div>
+    </div>
+     <div id="buylist" class="section evensection">
+        <div class="wrap evenwrap">
+            <h2>採買清單</h2>
         </div>
     </div>
 
